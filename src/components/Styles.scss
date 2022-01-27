@@ -1,0 +1,1241 @@
+/////////////////////////////header and first page starts
+
+:root{
+    --yellow: #f5bf23;
+    --black: #111;
+    --white: #fff;
+    --light-color: #666;
+    --light-bg: #eee;
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    --border:1rem solid rgba(0,0,0,.3);
+
+}
+
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0; padding:0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+@mixin grid($val) {
+    display: grid;
+    grid-template-coloumns: repeat(auto-fit, minmax($val, 1fr));
+    gap:2rem;
+}
+
+@mixin titleText($titleSize) {
+    font-size: $titleSize;
+    color:var(--light-color);
+    line-height: 1.5;
+}
+
+.icons {
+    display: flex;
+       line-height: 3rem;
+    font-Size: 2.9rem;
+    
+    color:var(--black);
+    cursor: pointer;
+    text-align: center;
+    margin: 5px;
+
+}
+
+.closebutton{
+    font-size: 2.5rem;
+    color: black;
+
+}
+
+
+.icon{
+    margin-left: 14px;
+    background: var(--light-bg);
+}
+
+.contactinfo{
+    text-align: center;
+    padding-top: 5rem;
+
+
+}
+
+
+.info{
+margin-bottom: 4rem;
+font-size: 2.5rem;
+
+
+}
+
+.share{
+padding-top: 3rem;
+border-top: var(--border);
+
+a{
+    font-size: 5rem;
+    margin: 6px;
+}
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+
+    &::-webkit-scrollbar{
+        width: 1rem;
+
+    }
+
+    &::-webkit-scrollbar{
+        background: transparent;
+}
+    &::-webkit-scrollbar-thumb{
+        background: var(--yellow);
+    }
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    background: var(--black);
+    color: var(--white);
+    cursor: pointer;
+    font-size: 1.7rem;
+    text-transform: capitalize;
+
+    &:hover{
+        background: var(--yellow);
+        color:var(--black);
+    }
+}
+
+@keyframes fadeIn {
+    0%{
+        top:50%;
+        opacity: 0;
+    }
+}
+
+.header{
+    position: sticky;
+    top:0; left: 0; right: 0;
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background-color: honeydew;
+
+.logo{
+    @include titleText(2.5rem);
+
+    span{
+        color: greenyellow;
+    }
+}
+
+.navbar a{
+    @include titleText(2rem);
+    margin:0 1rem;
+
+    &:hover{
+        color:var(--yellow);
+    }
+}
+
+
+
+#menu-btn{
+    display: none;
+}
+.search-form{
+    position: absolute;
+    top:120%; left:50%;
+    transform: translateX(-50%);
+    width: 70rem;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    animation: fadeIn .2s linear;
+    
+    
+    &.active{
+        display: flex;
+    }
+
+}
+
+input{
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    background: var(--light-bg);
+    font-size: 1.6rem;
+    color:var(--light-color)
+}
+
+label{
+    font-size: 2.5rem;
+    color:var(--black);
+    cursor: pointer;
+    margin: 0 1rem;
+
+    &:hover{
+        color:var(--yellow)
+    }
+}
+}
+.login-form{
+position: absolute;
+top:120%; left:50%;
+transform: translateX(-50%);
+width: 40rem;
+background: var(--white);
+box-shadow: var(--box-shadow);
+padding: 2rem;
+text-align: center;
+animation: fadeIn .2s linear;
+display: none;
+
+&.active{
+display: block;
+}
+
+h3{
+    @include titleText(2.5rem);
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.box{
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    background: var(--light-bg);
+    font-size: 1.6rem;
+    color:var(--light-color);
+    margin: .7rem 0;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+
+    label{
+        font-size: 1.5rem;
+        color:var(--light-color);
+        cursor: pointer;
+
+    }
+
+    a{
+        font-size: 1.5rem;
+        color:var(--light-color);
+        margin-left: auto;
+
+        &:hover{
+            color: var(--yellow);
+            text-decoration: underline;
+        }
+    }
+}
+.btn{
+    width: 50%;
+}
+
+}
+/////////////////////////////////Header and FirstPage ends
+
+
+
+
+
+
+
+
+///////////////////////////////Slider on Firstpage
+#app { height: 100% }
+html,
+body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background-size: cover;
+background-position-y: -200px;
+  background-repeat: no-repeat;
+  width: 100vh;
+  min-height: 100vh;
+  
+  /* Center slide text vertically */
+  div{
+    
+  display: flex;
+  }
+}
+
+
+.swiperimg{
+  min-height: 100vh;
+  min-width: 100%;
+  background-size: cover;
+
+}
+
+.content{
+    display: flex;
+  align-items: center;
+  width: none;
+  flex-direction: column;
+  margin-top: 40vh;
+  
+
+  h3{
+    font-size: 5.5rem;
+    text-transform: uppercase;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  p{
+    font-size: 2.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: midnightblue;
+  }
+  a{
+    width: 20%;
+    margin-left: 0;
+  }
+}
+
+
+
+
+
+
+
+
+//////////////////////////////////////////Secondpage About
+
+section{
+    padding: 10rem 10%;
+}
+
+.heading{
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    padding-left: 1rem;
+    border-left: 1rem solid yellow;
+}
+
+.about{
+
+.row{
+    display: flex;
+    align-items: center;
+
+
+    flex-wrap: wrap;
+    gap: 2rem;
+    
+
+    .video{
+flex:1 1 41rem;
+
+img{
+    width: auto;
+}
+ }
+ .content{
+     flex:1 1 41rem;
+    text-align: left;
+    display: flex;
+     h3{
+         display: flex;
+         font-size: 3.5rem;
+         font-family: 'Times New Roman', Times, serif;
+     }
+     p{
+         display: flex;
+         font-size: 2rem;
+         color: black;
+         font-family: 'Times New Roman', Times, serif;
+     }
+     a{
+         margin-left: 3px;
+     }
+ }
+
+}
+
+
+
+.box-container{
+    display: flex;
+    margin-top: 3rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .box{
+        text-align: center;
+        background-color: rgb(211, 247, 199);
+        width: 300px;
+        padding: 3rem 2rem; 
+        margin: 3rem;
+    }
+    h3{
+        font-size: 4rem;
+    }
+    p{
+        font-size: 1.5rem;
+        padding-top: .5rem;
+    }
+    }
+}
+///////////////////////////About Page ends
+
+
+
+//////////////////////////ContactUs Thirdpage Starts
+.contact{
+    background-color: black;
+
+
+    .heading{
+        color: white;
+    }
+
+    .row{
+        
+        flex-direction: row;
+        display: flex;
+        gap: 4rem;
+
+        .map{
+            flex:1 1 41rem;
+            width:60%;
+            display: flex;
+        }
+        form{
+            flex: 1 1 41rem;
+            background: white;
+            padding:2rem;
+            h3{
+                font-size: 2.5rem;
+                padding-bottom: 1rem;
+            }
+
+            .box{
+                margin:.7rem;
+                width: 100%;
+                padding: 1.5rem 0;
+                font-size: 1.6rem;
+                color:var(--light-color);
+
+                &:focus{
+                    border-color: var(--yellow);
+                }
+            }
+
+            textarea{
+                height: 15rem;
+                resize: none;
+            }
+        }
+    }
+}
+
+
+/////////////////////////////Contact Us Thirdpage ends
+
+
+
+
+
+////////////////////////////Fourth page Drop starts
+
+
+
+/////body active
+
+#app { height: 80vh }
+html,
+body {
+  position: relative;
+  height: 80vh;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+/////swiper active
+.swiper {
+  width: 75%;
+}
+
+////////inactive slide img
+.swiper-slide img {
+  display: block;
+  width: 80%;
+  height: 200%;
+  object-fit: cover;
+}
+
+
+.blogs{
+    background: rgb(235, 250, 225);
+height: 80vh;
+    }
+        
+       .blog-slider{
+            display: flex;
+            
+            
+        }
+    
+        ////////swipe active
+        .Swipe{
+            display: flex;
+            height: 120%;
+            width: 90%;
+        }
+    
+        .slide{
+            width: 100rem;
+            display: flex;
+            flex-direction: column;
+    
+    
+            &:hover .image img{
+                transform: scale(1.1);
+                
+            }
+    
+    /////active image and img
+            .image{
+                height: 30%;
+                width: 80%;
+                overflow: hidden;
+                margin: 0 auto;
+                margin-bottom: -1rem;
+    
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    padding-left: 0px;
+                    transition: .2s linear;
+                }
+            }
+    
+            .contents{
+           padding: 2rem;
+                padding-top: 4rem;
+                background: rgb(176, 255, 183);
+                box-shadow: springgreen;
+               display: flex;
+               flex-direction: column;
+    
+                h3{
+                    font-size: 2.5rem;
+                }
+    
+                p{
+                    padding:1rem 0;
+                    font-size: 1.4rem;
+                    color: black;
+                }
+            }
+        }
+     
+    
+////////////////////////Fourthpage drop ends
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////@media 
+
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+    .header{
+        #menu-btn{
+            display: inline-block;
+        }
+
+        .navbar{
+            position: absolute;
+            top: 99%; left:0; right:0;
+            background: var(--white);
+            border-top: var(--border);
+            border-bottom: var(--border);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+            &.active{
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+            
+            a{
+                display: block;
+                margin:2rem;
+            }
+        }
+    }
+}
+
+
+
+///////////////////////////////////////Media Phone
+@media (max-width:450px){
+
+    
+:root{
+    --yellow: #f5bf23;
+    --black: #111;
+    --white: #fff;
+    --light-color: #666;
+    --light-bg: #eee;
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    --border:1rem solid rgba(0,0,0,.3);
+
+}
+
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0; padding:0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+@mixin grid($val) {
+    display: grid;
+    grid-template-coloumns: repeat(auto-fit, minmax($val, 1fr));
+    gap:2rem;
+}
+
+@mixin titleText($titleSize) {
+    font-size: $titleSize;
+    color:var(--light-color);
+    line-height: 1.5;
+}
+
+.icons {
+    display: flex;
+       line-height: 3rem;
+    font-Size: 2.9rem;
+    
+    color:var(--black);
+    cursor: pointer;
+    text-align: center;
+    margin: 5px;
+
+}
+
+.closebutton{
+    font-size: 2.5rem;
+    color: black;
+
+}
+
+
+.icon{
+    margin-left: 14px;
+    background: var(--light-bg);
+}
+
+.contactinfo{
+    text-align: center;
+    padding-top: 5rem;
+
+
+}
+
+
+.info{
+margin-bottom: 4rem;
+font-size: 2.5rem;
+
+
+}
+
+.share{
+padding-top: 3rem;
+border-top: var(--border);
+
+a{
+    font-size: 5rem;
+    margin: 6px;
+}
+}
+
+html{
+    font-size: 35%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+
+    &::-webkit-scrollbar{
+        width: 1rem;
+
+    }
+
+    &::-webkit-scrollbar{
+        background: transparent;
+}
+    &::-webkit-scrollbar-thumb{
+        background: var(--yellow);
+    }
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    background: var(--black);
+    color: var(--white);
+    cursor: pointer;
+    font-size: 1.7rem;
+    text-transform: capitalize;
+
+    &:hover{
+        background: var(--yellow);
+        color:var(--black);
+    }
+}
+
+@keyframes fadeIn {
+    0%{
+        top:50%;
+        opacity: 0;
+    }
+}
+
+.header{
+    position: sticky;
+    top:0; left: 0; right: 0;
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background-color: honeydew;
+
+.logo{
+    @include titleText(2.5rem);
+
+    span{
+        color: greenyellow;
+    }
+}
+
+.navbar a{
+    @include titleText(1.5rem);
+    margin:0 1rem;
+
+    &:hover{
+        color:var(--yellow);
+    }
+}
+
+
+
+#menu-btn{
+    display: flex;
+}
+.search-form{
+    position: absolute;
+    top:120%; left:50%;
+    transform: translateX(-50%);
+    width: 70rem;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    animation: fadeIn .2s linear;
+    
+    
+    &.active{
+        display: flex;
+    }
+
+}
+
+input{
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    background: var(--light-bg);
+    font-size: 1.6rem;
+    color:var(--light-color)
+}
+
+label{
+    font-size: 2.5rem;
+    color:var(--black);
+    cursor: pointer;
+    margin: 0 1rem;
+
+    &:hover{
+        color:var(--yellow)
+    }
+}
+}
+.login-form{
+position: absolute;
+top:120%; left:50%;
+transform: translateX(-50%);
+width: 40rem;
+background: var(--white);
+box-shadow: var(--box-shadow);
+padding: 2rem;
+text-align: center;
+animation: fadeIn .2s linear;
+display: none;
+
+&.active{
+display: block;
+}
+
+h3{
+    @include titleText(2.5rem);
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.box{
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    background: var(--light-bg);
+    font-size: 1.6rem;
+    color:var(--light-color);
+    margin: .7rem 0;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+
+    label{
+        font-size: 1.5rem;
+        color:var(--light-color);
+        cursor: pointer;
+
+    }
+
+    a{
+        font-size: 1.5rem;
+        color:var(--light-color);
+        margin-left: auto;
+
+        &:hover{
+            color: var(--yellow);
+            text-decoration: underline;
+        }
+    }
+}
+.btn{
+    width: 50%;
+}
+
+}
+/////////////////////////////////Header and FirstPage ends
+
+
+
+
+
+
+
+
+///////////////////////////////Slider on Firstpage
+#app { min-height: 200px }
+html,
+body {
+  position: relative;
+  min-height: 200px;
+  width: 100%;
+}
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.swiper {
+  width: 100%;
+  min-height: 50%;
+  
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background-size: cover;
+background-position-y: -400px;
+background-position-x: -400px;
+  background-repeat: no-repeat;
+  width: 100vh;
+  min-height: 60vh;
+  
+  /* Center slide text vertically */
+  div{
+    
+  display: flex;
+  }
+}
+
+
+.swiperimg{
+  min-width: 100%;
+  background-size: cover;
+  max-height: 600px;
+
+}
+
+.content{
+  width: none;
+  flex-direction: column;
+  padding-bottom: 70vh;
+    line-height: 50px;
+  
+
+  h3{
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  p{
+    font-size: 2.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: midnightblue;
+  }
+  a{
+    width: 20%;
+    margin-left: 0;
+  }
+}
+
+
+
+
+
+
+
+
+//////////////////////////////////////////Secondpage About
+
+section{
+    padding: 10rem 10%;
+}
+
+.heading{
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    padding-left: 1rem;
+    border-left: 1rem solid yellow;
+}
+
+.about{
+
+.row{
+width: 100%;
+    flex-wrap: wrap;
+    gap: 2rem;
+    
+
+    .video{
+
+        display: flex;
+        width: 250px;
+        height: 200px;
+
+img{
+    width: auto;
+}
+ }
+ .content{
+     flex:1 1 41rem;
+    text-align: left;
+    display: flex;
+     h3{
+         display: flex;
+         font-size: 3.5rem;
+         font-family: 'Times New Roman', Times, serif;
+     }
+     p{
+         display: flex;
+         font-size: 2rem;
+         color: black;
+         font-family: 'Times New Roman', Times, serif;
+     }
+     a{
+         margin-left: 3px;
+     }
+ }
+
+}
+
+
+
+.box-container{
+    display: flex;
+    margin-top: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .box{
+        text-align: center;
+        background-color: rgb(211, 247, 199);
+        width: 300px;
+        padding: 3rem 2rem; 
+        margin: 3rem;
+    }
+    h3{
+        font-size: 4rem;
+    }
+    p{
+        font-size: 1.5rem;
+        padding-top: .5rem;
+    }
+    }
+}
+///////////////////////////About Page ends
+
+
+
+//////////////////////////ContactUs Thirdpage Starts
+.contact{
+    background-color: black;
+
+
+    .heading{
+        color: white;
+    }
+
+    .row{
+        
+        flex-direction: row;
+        display: flex;
+        gap: 2.5rem;
+
+        .map{
+            flex:1 1 41rem;
+            width:60%;
+            display: flex;
+            max-height: 50%;
+        }
+        form{
+            flex: 1 1 41rem;
+            background: white;
+            padding:2rem;
+            h3{
+                font-size: 2.5rem;
+                padding-bottom: 1rem;
+            }
+
+            .box{
+                margin:.7rem;
+                width: 100%;
+                padding: 1.5rem 0;
+                font-size: 1.6rem;
+                color:var(--light-color);
+
+                &:focus{
+                    border-color: var(--yellow);
+                }
+            }
+
+            textarea{
+                height: 15rem;
+                resize: none;
+            }
+        }
+    }
+}
+
+
+/////////////////////////////Contact Us Thirdpage ends
+
+
+
+
+
+////////////////////////////Fourth page Drop starts
+
+
+
+/////body active
+
+#app { height: 80vh }
+html,
+body {
+  position: relative;
+  height: 80vh;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+/////swiper active
+.swiper {
+  width: 75%;
+}
+
+////////inactive slide img
+.swiper-slide img {
+  display: block;
+  width: 80%;
+  height: 200%;
+  object-fit: cover;
+}
+
+
+.blogs{
+    background: rgb(235, 250, 225);
+height: 80vh;
+    }
+        
+       .blog-slider{
+            display: flex;
+            
+            
+        }
+    
+        ////////swipe active
+        .Swipe{
+            display: flex;
+            height: 120%;
+            width: 90%;
+        }
+    
+        .slide{
+            width: 100rem;
+            display: flex;
+            flex-direction: column;
+    
+    
+            &:hover .image img{
+                transform: scale(1.1);
+                
+            }
+    
+    /////active image and img
+            .image{
+                height: 30%;
+                width: 80%;
+                overflow: hidden;
+                margin: 0 auto;
+                margin-bottom: -1rem;
+    
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    padding-left: 0px;
+                    transition: .2s linear;
+                }
+            }
+    
+            .contents{
+           padding: 2rem;
+                padding-top: 4rem;
+                background: rgb(176, 255, 183);
+                box-shadow: springgreen;
+               display: flex;
+               flex-direction: column;
+    
+                h3{
+                    font-size: 2.5rem;
+                }
+    
+                p{
+                    padding:1rem 0;
+                    font-size: 1.4rem;
+                    color: black;
+                }
+            }
+        }
+     
+    
+////////////////////////Fourthpage drop ends
+
+
+
+
+
+}
+
