@@ -29,7 +29,7 @@ export default function App() {
   
   
   return (
-    <section className="blogs">
+    <section className="blogs" id="News">
     <Swiper slidesPerView={3} spaceBetween={1} freeMode={true} pagination={{
   "clickable": true, breakpoints: {450:{slidesPerView:1}}
 }} className="Swipe">
@@ -38,9 +38,9 @@ export default function App() {
 
                     </div>
                     <div className='contents'>
-                        <h3>Golf Cup anounces resumption</h3>
+                        <h3>Prikles Cup Annouces resumption </h3>
                         <p>latest about the champion named Tiger woods</p>
-                        <a href className='btn'>Read more</a>
+                        <a href="/#" className='btn'>Read more</a>
                     </div>
 </SwiperSlide>
 <SwiperSlide className="slide"><div className='image'>
@@ -48,9 +48,9 @@ export default function App() {
 
                     </div>
                     <div className='contents'>
-                        <h3>Golf Cup anounces resumption</h3>
+                        <h3>Alonso Marks 6 Years Title Undefeated</h3>
                         <p>latest about the champion named Tiger woods</p>
-                        <a href className='btn'>Read more</a>
+                        <a href="/#" className='btn'>Read more</a>
                     </div></SwiperSlide>
                     <SwiperSlide className="slide">
                     <div className='image'>
@@ -58,9 +58,9 @@ export default function App() {
 
                     </div>
                     <div className='contents'>
-                        <h3>Golf Cup anounces resumption</h3>
+                        <h3>New Course Acquired by state</h3>
                         <p>latest about the champion named Tiger woods</p>
-                        <a href className='btn'>Read more</a>
+                        <a href="/#" className='btn'>Read more</a>
                     </div>
                       </SwiperSlide>
                       <SwiperSlide className="slide"><div className='image'>
@@ -68,17 +68,17 @@ export default function App() {
 
                     </div>
                     <div className='contents'>
-                        <h3>Golf Cup anounces resumption</h3>
+                        <h3>Green Eyes the Channels Cup</h3>
                         <p>latest about the champion named Tiger woods</p>
-                        <a href className='btn'>Read more</a>
+                        <a href="/#" className='btn'>Read more</a>
                     </div></SwiperSlide><SwiperSlide className="slide"><div className='image'>
                         <img src={golf555} alt=""></img>
 
                     </div>
                     <div className='contents'>
-                        <h3>Golf Cup anounces resumption</h3>
+                        <h3>Will Tiger Renew His Contract?</h3>
                         <p>latest about the champion named Tiger woods</p>
-                        <a href className='btn'>Read more</a>
+                        <a href="/#" className='btn'>Read more</a>
                     </div></SwiperSlide>
                     </Swiper>
     </section>
