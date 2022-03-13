@@ -5,16 +5,20 @@ import { TiSocialFacebook, TiSocialInstagram, TiSocialTwitter, TiSocialYoutube }
 import { CgProfile } from "react-icons/cg";
 import { BiSearch } from "react-icons/bi";
 import { FaInfoCircle } from "react-icons/fa";
-import  { AiFillPhone, AiOutlineAlignLeft } from "react-icons/ai";
-//import { AiOutlineSearch } from "react-icons/ai";
+import  { AiFillPhone } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
 import { ImLocation } from "react-icons/im";
+import NavbarToggles from './NavbarToggles';
+
+
+
+
 
 function Header() { 
     return (
 
         <Navbar className='header' expand={false}>
-  <Container fluid>
+  <Container fluid className='Nav'>
 
 
 
@@ -22,30 +26,29 @@ function Header() {
     
         <a href className='logo'>Black<span>Golf</span></a>
 
-        <nav className='navbar'>
-            <a href>Home</a>
-            <a href>About</a>
-            <a href>Services</a>
-            <a href>Projects</a>
-            <a href>Pricing</a>
-            <a href>Contact</a>
-            <a href>News</a>
+        <nav className='navbar' id='col'>
+            <a href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#Pricing">Pricing</a>
+            <a href="#Contact">Contact</a>
+            <a href="#News">News</a>
         </nav>
 
         <div className='icons'>
-            
-        <AiOutlineAlignLeft id='menu-btn' />
+        
             <CgProfile className='icon' />
             <BiSearch className='icon'/>
             <FaInfoCircle className='icon' />
         </div>
-       
+        <NavbarToggles>
+          </NavbarToggles> 
 
-        <Navbar.Toggle aria-controls="offcanvasNavbar" />
+        <Navbar.Toggle aria-controls="offcanvasNavbar" className='Toggle' />
     <Navbar.Offcanvas
       id="offcanvasNavbar"
       aria-labelledby="offcanvasNavbarLabel"
       placement="end"
+      style={{width: "30rem"}}
     >
       <Offcanvas.Header closeButton className='closebutton'>
         <Offcanvas.Title id="offcanvasNavbarLabel"></Offcanvas.Title>
@@ -69,10 +72,10 @@ function Header() {
     <p>New York, USA</p>
 </div>
 <div className='share'>
-    <a href><TiSocialTwitter /></a>
-    <a href><TiSocialFacebook /></a>
-    <a href><TiSocialInstagram /></a>
-    <a href><TiSocialYoutube /></a>
+    <a href="/#"><TiSocialTwitter /></a>
+    <a href="/#"><TiSocialFacebook /></a>
+    <a href="/#"><TiSocialInstagram /></a>
+    <a href="/#"><TiSocialYoutube /></a>
 
 
 </div>
@@ -93,3 +96,5 @@ function Header() {
 }
 
 export default Header;
+
+
