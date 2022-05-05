@@ -374,7 +374,9 @@ section{
     
 
     .video{
+        display: flex;
 flex:1 1 41rem;
+height: 40rem !important;
 
 img{
     width: auto;
@@ -664,8 +666,19 @@ height: 100%;
 @media (max-width:768px) {
 
 /////swiper active
+
+.box-container{
+    display: flex;
+    margin-top: 3rem;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+}
 .swiper {
     width: 100%;
+  }
+  .btn{
+      width: 14rem !important;
   }
   
   ////////inactive slide img
@@ -1113,7 +1126,7 @@ img{
 .box-container{
     display: flex;
     margin-top: 3rem;
-    flex-direction: column;
+    flex-direction: column !important;
     justify-content: center;
     align-items: center;
 
